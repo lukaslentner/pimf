@@ -32,7 +32,6 @@ Ext.ux.pimf.users.NewWindow = Ext.extend(Ext.ux.pimf.users.AbstractWindow, {
   save: function() {
 
     var formData = this.items.item(0).getForm().getFieldValues();
-    var rawData = this.items.item(0).getForm().getValues();
 
     Ext.StoreMgr.get('UserStore').remoteNew({
       id: 0,

@@ -26,8 +26,6 @@ Ext.ux.pimf.folders.NavigationTree = Ext.extend(Ext.ux.pimf.folders.AbstractTree
         searchNode.relayEvents(Ext.getCmp('SearchField'), ['search', 'endsearch']);
         searchNode.addListener('search', function(searchText) {
 
-          var folderTree = Ext.getCmp('NavigationTree');
-
           this.unselect();
 
           this.attributes.searchParameter = {
@@ -54,8 +52,6 @@ Ext.ux.pimf.folders.NavigationTree = Ext.extend(Ext.ux.pimf.folders.AbstractTree
         });
         searchNode.relayEvents(Ext.getCmp('SearchGrid'), ['extendedsearch']);
         searchNode.addListener('extendedsearch', function(searchGrid) {
-
-          var folderTree = Ext.getCmp('NavigationTree');
 
           this.unselect();
 

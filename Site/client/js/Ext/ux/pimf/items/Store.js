@@ -365,13 +365,13 @@ Ext.ux.pimf.items.Store = Ext.extend(Ext.data.GroupingStore, {
           itemRecord.set('type', 'item');
 
           this.addSorted(itemRecord);
+          this.commitChanges();
+
+          this.fireEvent('remotenew', itemRecord);
 
         }
 
         this.resetRuleViolation();
-        this.commitChanges();
-
-        this.fireEvent('remotenew', itemRecord);
 
       }
     });

@@ -81,7 +81,7 @@ Ext.ux.crypto.SHA1 = function() {
 
       return H0.toHexStr() + H1.toHexStr() + H2.toHexStr() + H3.toHexStr() + H4.toHexStr();
     }
-  }
+  };
 
 }();
 

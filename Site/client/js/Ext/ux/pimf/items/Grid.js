@@ -192,6 +192,8 @@ Ext.ux.pimf.items.Grid = Ext.extend(Ext.grid.GridPanel, {
 
           }
         });
+        //to drop warning in validator
+        dropTarget;
       },
       store: Ext.StoreMgr.get('ItemStore'),
       view: new Ext.ux.pimf.items.Grid_StructuredGridView()
