@@ -1,0 +1,72 @@
+
+PATTERN
+---------
+
+Defines the patterns for /items/getAsGridItems.php
+
+The left column states always the subject and valid comparators which will be
+sent as {pattern:[{subject: '', comparator: '', value: ''}, ...]}; the right
+describes the database query (intended are OR-criteria).
+
+Multiple Patterns are connected with a logical AND or OR depending on setting "logic" in data
+
+
+===============================================================================
+
+any
+  has               A simple search:
+                      Folders.id is
+                      Folders.name has
+                      Folders.description has
+                      Folders.parentFolderId is
+                      ItemFolderLinks.folderId is
+                      ItemFolderLinks.Items.id is
+                      ItemFolderLinks.Items.name has
+                      ItemFolderLinks.Items.description has
+                      ItemFolderLinks.Items.FreePropertyValue[id].value has
+
+id
+  is                A fix id
+                      Folders.id is
+                      ItemFolderLinks.Items.id is
+
+name
+  is                A fix name
+                      Folders.name is
+                      ItemFolderLinks.Items.name is
+  has               A part of a name
+                      Folders.name is
+                      ItemFolderLinks.Items.name is
+
+description
+  is                A fix description
+                      Folders.description is
+                      ItemFolderLinks.Items.description is
+  has               A part of a description
+                      Folders.description is
+                      ItemFolderLinks.Items.description is
+
+parentFolderId
+  is                A fix parent Folder
+                      Folders.parentFolderId is
+                      ItemFolderLinks.folderId is
+
+path
+  has               Find a fix folder in the ancestors
+                      Folders.getPath() has
+                      ItemFolderLinks.getPath() has
+
+type
+  is                A fix type
+                      Folders.type is
+                      'item' is
+                      
+ruleViolation
+  is not empty
+					All rule violations (value = '')                     
+
+[freeProperty] e.g. freePropertyValue4
+  is                A certain freePropertyValue
+                      ItemFolderLinks.Items.FreePropertyValue[id].value is
+  has               A part of a certain freePropertyValue
+                      ItemFolderLinks.Items.FreePropertyValue[id].value has

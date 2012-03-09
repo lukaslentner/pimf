@@ -1,0 +1,40 @@
+General
+=======
+
+PIMF is a system to admin your items in a science context creating an
+inventory database. It relays on a PHP capable webserver and a mysql
+database server.
+
+Have a lot of fun!!!
+
+Installation
+============
+
+(1) First of all you have to setup a webserver (with PHP) and a mysql server.
+This is pretty standard. You can use a LAMP/WAMP configuration. Be careful
+that you have installed and activated the PHP JSON-Module which is needed
+by this software.
+
+(2) Create the mysql database structure by importing the script
+/Material/databaseStructure.sql into your mysql server.
+
+(3) Create the server configuration file /Site/server/config.php from the
+example file in the same folder and adjust the 4 values: MYSQL_SERVER,
+MYSQL_USERNAME, MYSQL_PASSWORD, MYSQL_DB. These define the php connection
+to the database.
+
+(4) Create the client configuration file /Site/client/config.js from the
+example file in the same folder and adjust the value Ext.SOFTWARE_URL to
+point to your /Site folder. Keep in mind to have a Slash "/" at the end of
+the url.
+
+(5) You have to grant write permissions to the folders
+/Site/data/images and /Site/data/images/thumbnails cause the application
+will want to put there the images you upload. If you use a Linux System
+you can change the owner of the folders to the webservers user account.
+(Use the chown command)
+
+(6) Now you can use the software under the URL you put into the
+/Site/client/config.js
+For the first login you can use "root" as username and password. Please
+change this right after the setup process.

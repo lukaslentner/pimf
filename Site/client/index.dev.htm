@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+  <title>Praktikum Inventar</title>
+
+  <!-- Content meta information -->
+  <meta name="description" content="" />
+  <meta name="author"      content="Lukas Lentner" />
+  <meta name="keywords"    content="" />
+  <meta name="date"        content="2010-06-01T00:00:00+01:00" />
+
+  <!-- HTTP-Header meta information -->
+  <meta http-equiv="content-type"        content="text/html; charset=UTF-8" />
+  <meta http-equiv="content-language"    content="de" />
+  <meta http-equiv="content-script-type" content="text/javascript" />
+  <meta http-equiv="content-style-type"  content="text/css" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+  <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+
+  <!-- Cascading Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="js/Ext/framework-3.3.1/resources/css/ext-all.css" />
+  <link rel="stylesheet" type="text/css" href="css/Ext/ux/form/FileUploadField.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+</head>
+<body>
+
+  <div id="initBox-background">
+    <div id="initBox-vcenter">
+      <div id="initBox">
+        <p id="initBox-title">Praktikum Inventar 1.0</p>
+        <p id="initBox-message">Überprüfe JavaScript-Einstellungen ...</p>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">window.document.getElementById('initBox-message').innerHTML = 'Lade Framework ...';</script>
+  <script type="text/javascript" src="js/Ext/framework-3.3.1/adapter/ext/ext-base-debug.js"></script>
+  <script type="text/javascript" src="js/Ext/framework-3.3.1/ext-all-debug.js"></script>
+  <script type="text/javascript" src="js/Ext/framework-3.3.1/src/locale/ext-lang-de.js"></script>
+
+  <script type="text/javascript">window.document.getElementById('initBox-message').innerHTML = 'Lade Anwendungsebene ...';</script>
+  <script type="text/javascript" src="js/Ext/ux/crypto/SHA1.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/form/FileUploadField.js"></script>
+
+  <script type="text/javascript" src="js/Ext/ux/pimf/folders/AbstractTree.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/folders/AbstractWindow.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/folders/CloneDialog.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/folders/EditWindow.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/folders/NavigationTree.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/folders/NewWindow.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/folders/PropertyView.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/folders/RemoveDialog.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/folders/Store.js"></script>
+
+  <script type="text/javascript" src="js/Ext/ux/pimf/freeProperties/AbstractWindow.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/freeProperties/EditWindow.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/freeProperties/Grid.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/freeProperties/NewWindow.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/freeProperties/PropertyView.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/freeProperties/RemoveDialog.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/freeProperties/Store.js"></script>
+
+  <script type="text/javascript" src="js/Ext/ux/pimf/images/BrowserWindow.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/images/ImageField.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/images/RemoveDialog.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/images/RenameDialog.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/images/Store.js"></script>
+
+  <script type="text/javascript" src="js/Ext/ux/pimf/items/AbstractWindow.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/items/AbstractWindow_Grid.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/items/AbstractWindow_Tree.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/items/CloneDialog.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/items/EditWindow.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/items/Grid.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/items/Grid_MultiRowSelectionModel.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/items/Grid_StructuredGridView.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/items/NewWindow.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/items/PreviewWindow.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/items/PropertyView.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/items/RemoveDialog.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/items/Store.js"></script>
+
+  <script type="text/javascript" src="js/Ext/ux/pimf/misc/BlankGrid.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/misc/BlankPropertyView.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/misc/LockButton.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/misc/LoginWindow.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/misc/LogoutButton.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/misc/MultiPropertyView.js"></script>
+
+  <script type="text/javascript" src="js/Ext/ux/pimf/override/Array.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/override/Ext.data.Record.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/override/Ext.data.Types.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/override/Ext.MessageBox.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/override/Ext.tree.TreeDragZone.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/override/Ext.tree.TreeNode.js"></script>
+
+  <script type="text/javascript" src="js/Ext/ux/pimf/search/Field.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/search/Grid.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/search/Store.js"></script>
+
+  <script type="text/javascript" src="js/Ext/ux/pimf/users/AbstractWindow.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/users/EditWindow.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/users/Grid.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/users/NewWindow.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/users/PropertyView.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/users/RemoveDialog.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/users/Store.js"></script>
+
+  <script type="text/javascript" src="js/Ext/ux/pimf/Connection.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/StoreObserver.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/Util.js"></script>
+  <script type="text/javascript" src="js/Ext/ux/pimf/Viewport.js"></script>
+
+  <script type="text/javascript" src="js/Ext/ux/ToolsTips.js"></script>
+
+  <script type="text/javascript">window.document.getElementById('initBox-message').innerHTML = 'Starte Anwendung ...';</script>
+  <script type="text/javascript" src="config.js"></script>
+  <script type="text/javascript" src="js/Init.js"></script>
+  <script type="text/javascript">Init.startApplication();</script>
+</body>
+</html>
