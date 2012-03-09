@@ -13,7 +13,8 @@ Installation
 (1) First of all you have to setup a webserver (with PHP) and a mysql server.
 This is pretty standard. You can use a LAMP/WAMP configuration. Be careful
 that you have installed and activated the PHP JSON-Module which is needed
-by this software.
+by this software. Then copy the content of /Site to the DocumentRoot of your
+webserver.
 
 (2) Create the mysql database structure by importing the script
 /Material/databaseStructure.sql into your mysql server.
